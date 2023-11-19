@@ -63,7 +63,6 @@ const updateUserinfo = async (req, res) => {
 
     // Does the user exist to update?
     const user = await Userinfo.findById(id).exec();
-    console.log("yes")
 
     if (!user) {
         return res.status(400).json({ message: 'User not found' });
@@ -80,7 +79,6 @@ const updateUserinfo = async (req, res) => {
     user.address = address;
 
     const updatedUser = await user.save();
-    console.log("yes1")
     res.json({ message: `${updatedUser.username} updated` });
 }
 

@@ -112,7 +112,6 @@ const updatePostById = async (req, res) => {
 
 const deletePostById = async (req, res) => {
     const { id } = req.body;
-    console.log(id);
 
     // Confirm data
     if (!id) {

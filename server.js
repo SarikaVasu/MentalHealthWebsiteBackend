@@ -38,6 +38,7 @@ app.use('/doctorlogins', require('./routes/doctorRoutes'));
 app.use('/userinfos', require('./routes/api/users'));
 app.use('/doctorinfos', require('./routes/api/doctors'));
 app.use('/posts', require('./routes/api/posts'));
+app.use('/appointments', require('./routes/api/appointments'));
 
 app.all('*', (req, res) => {
     res.status(404)

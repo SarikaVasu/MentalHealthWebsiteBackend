@@ -54,8 +54,6 @@ const userSignin = async (req, res) => {
     const foundUser = await Userlogin.findOne({ username }).exec()
     const foundUser2 = await Userinfo.findOne({ username }).exec()
 
-    console.log(foundUser2._id);
-
     if (!foundUser || !foundUser.active) {
         return res.status(401).json({ message: 'Unauthorized' })
     }
